@@ -174,22 +174,6 @@ The proposed architecture offers several advantages over a conventional FIR impl
 
 ---
 
-## GitHub Project Structure
-
-```
-7-Tap-Symmetric-Pipelined-FIR-Filter
-
-rtl/
-    symmetric_fir_pipeline.v
-
-tb/
-    tb_symmetric_fir.v
-
-README.md
-```
-
----
-
 ## Tools Used
 
 ### Xilinx Vivado Design Suite
@@ -409,14 +393,7 @@ Reduction:
 7−4=3 multipliers
 ```
 
-Percentage reduction:
-
-[
-\frac{3}{7}\times100
-====================
-
-42.86%
-]
+Percentage reduction: 42.86%
 
 Thus,
 
@@ -601,36 +578,7 @@ The proposed FIR filter employs a pipelined architecture to improve throughput a
 
 The architecture consists of four major stages:
 
-```
-                Input Sample
-                     |
-                     V
-          +-------------------+
-          | Stage 1           |
-          | Delay Registers   |
-          +-------------------+
-                     |
-                     V
-          +-------------------+
-          | Stage 2           |
-          | Symmetric Addition|
-          +-------------------+
-                     |
-                     V
-          +-------------------+
-          | Stage 3           |
-          | Multiplication    |
-          +-------------------+
-                     |
-                     V
-          +-------------------+
-          | Stage 4           |
-          | Accumulation      |
-          +-------------------+
-                     |
-                     V
-                 Filter Output
-```
+<img width="1693" height="929" alt="image" src="https://github.com/user-attachments/assets/c74e4156-d43e-4691-a382-08765b3fa384" />
 
 Pipeline registers isolate each computational stage, enabling the circuit to operate at higher clock frequencies.
 
