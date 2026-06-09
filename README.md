@@ -1604,19 +1604,15 @@ Check steady-state response.
 
 The design was verified by comparing:
 
-## Mathematical Analysis
-
-Manual FIR calculations.
-
-## Verilog Simulation
-
-Vivado simulation output.
 
 ## TCL Console Output
+
+<img width="386" height="538" alt="image" src="https://github.com/user-attachments/assets/7c1c09c6-e8a6-446c-a8b4-3cb3d6903ef9" />
 
 Printed simulation values.
 
 ## Waveform Observation
+<img width="761" height="409" alt="image" src="https://github.com/user-attachments/assets/dce361a5-4db1-4c5e-b83a-1b4255a43525" />
 
 Signal transitions over time.
 
